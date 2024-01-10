@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -77,7 +74,7 @@ plugins=(
   zsh-vi-mode
 )
 
-# ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -125,3 +122,8 @@ USE_GKE_GCLOUD_AUTH_PLUGIN=true
 
 # nvm
 source /usr/share/nvm/init-nvm.sh
+
+# load custom profile 
+if [[ -f $HOME/.profile ]]; then
+  source $HOME/.profile
+fi
