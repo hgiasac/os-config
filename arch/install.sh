@@ -3,12 +3,12 @@ sudo pacman -S \
 	neovim iwd pipewire wireplumber pipewire-audio pipewire-pulse easyeffects \
 	nvidia xorg-server xorg-xrandr noto-fonts-cjk noto-fonts-emoji \
 	fcitx5-im fcitx5-rime fcitx5-unikey xclip tmux breeze-icons \
-	thunderbird firefox chromium sddm acpid jq xsettingsd less \
+	thunderbird firefox chromium sddm acpid jq xsettingsd less bluez bluez-utils blueman \
 	just zsh docker docker-compose docker-buildx minikube nix go rustup ripgrep fd kubectl helm \
 	wget openssh lazygit unzip luarocks python-pip python-pynvim \
 	lximage-qt lxqt-admin lxqt-archiver lxqt-config lxqt-globalkeys lxqt-notificationd \
 	lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session \
-	lxqt-sudo lxqt-themes obconf-qt openbox pcmanfm-qt obs-studio mpv unixodbc
+	lxqt-sudo lxqt-themes obconf-qt openbox pcmanfm-qt obs-studio mpv unixodbc openshot
 
 # yay & aur packages
 mkdir ~/projects && cd ~/projects
@@ -18,11 +18,13 @@ pacman -S --needed git base-devel &&
 	makepkg -si
 cd ~ && rm -rf ~/projects/yay
 yay nvm ttf-nerd-fonts-symbols-mono visual-studio-code-bin slack-desktop \
-	google-cloud-cli google-cloud-cli-gke-gcloud-auth-plugin qps ghcup-hs-bin
+	google-cloud-cli google-cloud-cli-gke-gcloud-auth-plugin qps ghcup-hs-bin \
+	hadolint-bin
 
 # enable services
 sudo systemctl enable sddm
 sudo systemctl enable acpid
+sudo systemctl enable bluetooth
 
 # font configs
 sudo cp font/64-language-selector-prefer.conf /etc/fonts/conf.d/
