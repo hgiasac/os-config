@@ -5,7 +5,7 @@ sudo pacman -S \
 	fcitx5-im fcitx5-rime fcitx5-unikey xclip tmux breeze-icons libreoffice-fresh \
 	thunderbird firefox chromium sddm acpid jq xsettingsd less bluez bluez-utils blueman \
 	just zsh docker docker-compose docker-buildx minikube nix go rustup ripgrep fd kubectl helm \
-	wget openssh lazygit unzip luarocks python-pip python-pynvim python-pipx \
+	wget openssh lazygit unzip luarocks python-pip python-pynvim python-pipx python-numpy \
 	lximage-qt lxqt-admin lxqt-archiver lxqt-config lxqt-globalkeys lxqt-notificationd \
 	lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session \
 	lxqt-sudo lxqt-themes obconf-qt openbox pcmanfm-qt obs-studio mpv unixodbc openshot
